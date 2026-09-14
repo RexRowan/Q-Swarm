@@ -11,6 +11,5 @@ A radical sci-fi landing page and interactive network dashboard for Q-Swarm.
 Open `index.html` in a browser, or serve the folder with any static web server.
 
 ## Deploy
-The site is static and can be deployed directly to GitHub Pages, Netlify, Vercel, Cloudflare Pages, or similar hosting.
 
-The interface is deliberately hardware-agnostic. The example agents are illustrative UI data and should be replaced with live Q-Swarm protocol data when the backend exists.
+The interface is deliberately hardware-agnostic. The example agents are illustrative UI data and would be replaced with live Q-Swarm protocol data when the backend exists.
