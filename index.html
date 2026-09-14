@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Q-Swarm-Matrix — an open, hardware-agnostic agent network for quantum computing resources.">
+  <title>Q-Swarm-Matrix // Quantum Agent Network</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanlines"></div>
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Q-Swarm-Matrix home">
+      <span class="brand-mark"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+      <span>Q-SWARM<span class="dim">-</span>MATRIX</span>
+    </a>
+    <nav>
+      <a class="active" href="#home">HOME</a>
+      <a href="#network">NETWORK</a>
+      <a href="#agents">AGENTS</a>
+      <a href="#protocol">PROTOCOL</a>
+      <a href="#docs">DOCS</a>
+    </nav>
+    <a class="github" href="https://github.com/RexRowan/Q-Swarm" target="_blank" rel="noreferrer">↗ GITHUB</a>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> OPEN QUANTUM RESOURCE NETWORK</div>
+        <h1>THE MACHINES<br><em>ARE A NETWORK.</em></h1>
+        <p class="lead">Q-Swarm-Matrix is an open, hardware-agnostic agent layer for quantum computing resources.</p>
+        <p class="sub">Quantum machines, simulators and software systems can describe themselves, discover one another and expose their capabilities through a common protocol.</p>
+        <div class="actions">
+          <a class="button primary" href="#network">ENTER THE MATRIX <span>→</span></a>
+          <a class="button ghost" href="#protocol">READ THE PROTOCOL</a>
+        </div>
+        <div class="terminal-line"><span>QSM://</span> network.status() <b>→</b> <strong>ONLINE</strong></div>
+      </div>
+
+      <div class="hero-orbit" aria-hidden="true">
+        <div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div>
+        <div class="core"><span class="core-symbol">Q</span><span>MATRIX</span></div>
+        <span class="node n1">ION</span><span class="node n2">SUPER</span><span class="node n3">SIM</span>
+        <span class="node n4">ZX</span><span class="node n5">FT</span><span class="node n6">QEC</span>
+        <span class="beam b1"></span><span class="beam b2"></span><span class="beam b3"></span>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Network status">
+      <span>◉ 12 AGENTS</span><span>◉ 04 TECHNOLOGIES</span><span>◉ 31 CAPABILITIES</span><span>◉ 07 ACTIVE LINKS</span><span>◉ PROTOCOL v0.1</span>
+    </section>
+
+    <section id="network" class="section network-section">
+      <div class="section-head">
+        <div><span class="eyebrow">01 // LIVE TOPOLOGY</span><h2>QUANTUM AGENT <em>NETWORK</em></h2></div>
+        <div class="status"><span class="pulse"></span> MATRIX ONLINE</div>
+      </div>
+
+      <div class="network-grid">
+        <aside class="console">
+          <div class="console-title">MATRIX CONSOLE <span>QSM-01</span></div>
+          <div class="console-group">
+            <label>NETWORK MODE</label>
+            <button class="console-btn selected" data-filter="all">◈ FULL SWARM</button>
+            <button class="console-btn" data-filter="hardware">◉ HARDWARE</button>
+            <button class="console-btn" data-filter="simulator">◇ SIMULATORS</button>
+            <button class="console-btn" data-filter="software">△ SOFTWARE</button>
+          </div>
+          <div class="console-group">
+            <label>QUERY</label>
+            <input id="agentSearch" type="search" placeholder="search agent...">
+          </div>
+          <div class="console-readout">
+            <span>LATENCY</span><b>18 ms</b>
+            <span>LINKS</span><b>07</b>
+            <span>HEALTH</span><b class="good">99.2%</b>
+          </div>
+        </aside>
+
+        <div class="matrix-map" id="matrixMap">
+          <canvas id="networkCanvas"></canvas>
+          <div class="map-label">Q-SWARM / TOPOLOGY / REAL-TIME</div>
+          <div class="map-core">Q</div>
+          <div class="map-node hardware" data-name="IONQ" style="--x:22%;--y:27%"><span>IONQ</span><b>36Q</b></div>
+          <div class="map-node hardware" data-name="IBM" style="--x:76%;--y:22%"><span>IBM</span><b>127Q</b></div>
+          <div class="map-node hardware" data-name="RIGETTI" style="--x:82%;--y:70%"><span>RIGETTI</span><b>80Q</b></div>
+          <div class="map-node simulator" data-name="AER" style="--x:24%;--y:75%"><span>AER</span><b>SIM</b></div>
+          <div class="map-node software" data-name="CIRQ" style="--x:58%;--y:82%"><span>CIRQ</span><b>SIM</b></div>
+          <div class="map-node software" data-name="ZX" style="--x:52%;--y:13%"><span>ZX</span><b>PASS</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="agents" class="section">
+      <div class="section-head">
+        <div><span class="eyebrow">02 // DISCOVERY</span><h2>AGENT <em>REGISTRY</em></h2></div>
+        <a class="text-link" href="#protocol">VIEW SPEC →</a>
+      </div>
+      <div class="agent-grid">
+        <article class="agent-card hardware" data-agent="ionq">
+          <div class="card-top"><span class="glyph">◉</span><span class="tag">HARDWARE</span><span class="online">● ONLINE</span></div>
+          <h3>IONQ // TRAPPED-ION</h3><p>High-fidelity trapped-ion resource profile.</p>
+          <div class="metrics"><span><b>36</b> QUBITS</span><span><b>99.7%</b> FIDELITY*</span></div>
+        </article>
+        <article class="agent-card hardware" data-agent="ibm">
+          <div class="card-top"><span class="glyph">◉</span><span class="tag">HARDWARE</span><span class="online">● ONLINE</span></div>
+          <h3>IBM // SUPERCONDUCTING</h3><p>Superconducting architecture capability agent.</p>
+          <div class="metrics"><span><b>127</b> QUBITS</span><span><b>21</b> LINKS</span></div>
+        </article>
+        <article class="agent-card hardware" data-agent="rigetti">
+          <div class="card-top"><span class="glyph">◉</span><span class="tag">HARDWARE</span><span class="online">● ONLINE</span></div>
+          <h3>RIGETTI // SUPERCONDUCTING</h3><p>Gate-model resource with topology metadata.</p>
+          <div class="metrics"><span><b>80</b> QUBITS</span><span><b>24</b> LINKS</span></div>
+        </article>
+        <article class="agent-card simulator" data-agent="aer">
+          <div class="card-top"><span class="glyph">◇</span><span class="tag">SIMULATOR</span><span class="online">● ONLINE</span></div>
+          <h3>AER // SIMULATION</h3><p>Noise-aware simulator resource agent.</p>
+          <div class="metrics"><span><b>∞</b> VIRTUAL</span><span><b>NOISE</b> MODELLED</span></div>
+        </article>
+        <article class="agent-card software" data-agent="cirq">
+          <div class="card-top"><span class="glyph">△</span><span class="tag">SOFTWARE</span><span class="online">● ONLINE</span></div>
+          <h3>CIRQ // SOFTWARE</h3><p>Framework capability and execution profile.</p>
+          <div class="metrics"><span><b>API</b> READY</span><span><b>OPEN</b> SOURCE</span></div>
+        </article>
+        <article class="agent-card software" data-agent="zx">
+          <div class="card-top"><span class="glyph">△</span><span class="tag">SOFTWARE</span><span class="online">● ONLINE</span></div>
+          <h3>ZX // GRAPH ENGINE</h3><p>Graph-rewrite and circuit reasoning agent.</p>
+          <div class="metrics"><span><b>ZX</b> CALCULUS</span><span><b>PASS</b> READY</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="protocol" class="section protocol">
+      <div class="protocol-copy">
+        <span class="eyebrow">03 // THE PROTOCOL</span>
+        <h2>FROM ENDPOINTS<br>TO <em>AGENTS.</em></h2>
+        <p>A Q-Swarm agent is a machine-readable description of a quantum resource. The protocol separates the resource from the software that wants to use it.</p>
+        <div class="protocol-list">
+          <div><b>01</b><span>DESCRIBE</span><small>Expose capabilities, constraints and provenance.</small></div>
+          <div><b>02</b><span>DISCOVER</span><small>Find compatible resources across the network.</small></div>
+          <div><b>03</b><span>MATCH</span><small>Compare a workload against available resources.</small></div>
+          <div><b>04</b><span>CONNECT</span><small>Let higher-level software coordinate the swarm.</small></div>
+        </div>
+      </div>
+      <div class="code-panel">
+        <div class="code-head"><span>agent.qsm</span><span>● VALID</span></div>
+        <pre><code>{
+  <span>"agent"</span>: <span>"qsm://resource/alpha"</span>,
+  <span>"technology"</span>: <span>"superconducting"</span>,
+  <span>"qubits"</span>: <span>127</span>,
+  <span>"capabilities"</span>: [
+    <span>"gate_model"</span>,
+    <span>"two_qubit"</span>,
+    <span>"dynamic_circuits"</span>
+  ],
+  <span>"topology"</span>: <span>"heavy_hex"</span>,
+  <span>"status"</span>: <span>"online"</span>,
+  <span>"protocol"</span>: <span>"qsm/0.1"</span>
+}</code></pre>
+      </div>
+    </section>
+
+    <section class="manifesto">
+      <div class="manifesto-mark">Q</div>
+      <p class="eyebrow">THE IDEA</p>
+      <h2>THE QUANTUM COMPUTER<br>SHOULD NOT BE AN <em>ISLAND.</em></h2>
+      <p>Q-Swarm-Matrix explores an open computational ecology in which quantum machines, simulators and software resources can describe themselves and participate in a shared network.</p>
+      <a class="button primary" href="https://github.com/RexRowan/Q-Swarm" target="_blank" rel="noreferrer">BUILD THE SWARM →</a>
+    </section>
+  </main>
+
+  <footer id="docs">
+    <div><strong>Q-SWARM-MATRIX</strong><span>OPEN QUANTUM INFRASTRUCTURE</span></div>
+    <div class="footer-links"><a href="https://github.com/RexRowan/Q-Swarm" target="_blank" rel="noreferrer">GITHUB</a><a href="#protocol">PROTOCOL</a><a href="#agents">AGENTS</a></div>
+    <div>HARDWARE AGNOSTIC // OPEN SOURCE</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
